@@ -1,0 +1,391 @@
+<robot
+  name="LRMate200iD_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00682671411674345 -0.000321709618726068 0.08042294877044"
+        rpy="0 0 0" />
+      <mass
+        value="4.85330591768461E-10" />
+      <inertia
+        ixx="2.19871507297122E-12"
+        ixy="1.18498593677591E-14"
+        ixz="-1.43011350505846E-14"
+        iyy="2.38291565776075E-12"
+        iyz="3.06011987222769E-15"
+        izz="2.28014946222196E-12" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LRMate200iD_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LRMate200iD_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="shoulder">
+    <inertial>
+      <origin
+        xyz="0.017218 -0.00043761 0.077589"
+        rpy="0 0 0" />
+      <mass
+        value="3.1897E-10" />
+      <inertia
+        ixx="2.8977E-12"
+        ixy="-1.9091E-16"
+        ixz="3.4135E-13"
+        iyy="1.6458E-12"
+        iyz="-2.6685E-15"
+        izz="2.3317E-12" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LRMate200iD_description/meshes/shoulder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LRMate200iD_description/meshes/shoulder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_yaw"
+    type="revolute">
+    <origin
+      xyz="0 8.69401445555014E-05 0.17"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="shoulder" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.967059728"
+      upper="2.967059728"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="bicep">
+    <inertial>
+      <origin
+        xyz="-0.0079934 -0.0018019 0.12126"
+        rpy="0 0 0" />
+      <mass
+        value="6.3617E-10" />
+      <inertia
+        ixx="1.0665E-11"
+        ixy="-8.1152E-15"
+        ixz="-1.4516E-13"
+        iyy="8.707E-12"
+        iyz="5.5678E-14"
+        izz="3.1704E-12" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LRMate200iD_description/meshes/bicep.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LRMate200iD_description/meshes/bicep.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_pitch"
+    type="revolute">
+    <origin
+      xyz="0.0499991769452175 -8.69401445554976E-05 0.16"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder" />
+    <child
+      link="bicep" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.919862177"
+      upper="2.094395102"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="elbow">
+    <inertial>
+      <origin
+        xyz="0.0084754 0.00067835 0.017697"
+        rpy="0 0 0" />
+      <mass
+        value="2.4013E-10" />
+      <inertia
+        ixx="6.3418E-13"
+        ixy="4.9119E-15"
+        ixz="7.7121E-14"
+        iyy="7.3788E-13"
+        iyz="6.64E-15"
+        izz="7.3091E-13" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LRMate200iD_description/meshes/elbow.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LRMate200iD_description/meshes/elbow.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow_pitch"
+    type="revolute">
+    <origin
+      xyz="0 0 0.33"
+      rpy="0 0 0" />
+    <parent
+      link="bicep" />
+    <child
+      link="elbow" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.577924967"
+      upper="1.204277184"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="forearm">
+    <inertial>
+      <origin
+        xyz="0.10986 0.0042506 0.00030663"
+        rpy="0 0 0" />
+      <mass
+        value="2.0398E-10" />
+      <inertia
+        ixx="3.4152E-13"
+        ixy="1.7083E-14"
+        ixz="-1.2072E-15"
+        iyy="1.1569E-12"
+        iyz="-2.4066E-16"
+        izz="1.1962E-12" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LRMate200iD_description/meshes/forearm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LRMate200iD_description/meshes/forearm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow_roll"
+    type="revolute">
+    <origin
+      xyz="0.0901 0 0.035"
+      rpy="0 0 0" />
+    <parent
+      link="elbow" />
+    <child
+      link="forearm" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.316125579"
+      upper="3.316125579"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wrist">
+    <inertial>
+      <origin
+        xyz="0.0157332956249944 0.00307668647090359 -6.01551264118871E-05"
+        rpy="0 0 0" />
+      <mass
+        value="4.32840002975359E-11" />
+      <inertia
+        ixx="2.95751346237483E-14"
+        ixy="-2.53442085009526E-15"
+        ixz="6.40566175880957E-18"
+        iyy="5.54734169507482E-14"
+        iyz="-6.40550352119748E-19"
+        izz="5.31069938480735E-14" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LRMate200iD_description/meshes/wrist.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LRMate200iD_description/meshes/wrist.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_pitch"
+    type="revolute">
+    <origin
+      xyz="0.2449 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="forearm" />
+    <child
+      link="wrist" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.094395102"
+      upper="2.094395102"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="palm">
+    <inertial>
+      <origin
+        xyz="-0.00638556517866073 1.74744733170378E-19 -0.000173248781898283"
+        rpy="0 0 0" />
+      <mass
+        value="1.33888429975585E-12" />
+      <inertia
+        ixx="2.77996245082917E-16"
+        ixy="4.66971465264597E-34"
+        ixz="-6.09324350616116E-19"
+        iyy="1.52283716989386E-16"
+        iyz="-1.68408415503802E-32"
+        izz="1.55977274955722E-16" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LRMate200iD_description/meshes/palm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.133333333333333 0.133333333333333 0.133333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LRMate200iD_description/meshes/palm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_roll"
+    type="revolute">
+    <origin
+      xyz="0.08 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="wrist" />
+    <child
+      link="palm" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-6.283185307"
+      upper="6.283185307"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
