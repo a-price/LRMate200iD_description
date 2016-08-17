@@ -2,20 +2,6 @@
   name="LRMate200iD_description">
   <link
     name="base_link">
-    <inertial>
-      <origin
-        xyz="-0.00682671411674345 -0.000321709618726068 0.08042294877044"
-        rpy="0 0 0" />
-      <mass
-        value="4.85330591768461E-10" />
-      <inertia
-        ixx="2.19871507297122E-12"
-        ixy="1.18498593677591E-14"
-        ixz="-1.43011350505846E-14"
-        iyy="2.38291565776075E-12"
-        iyz="3.06011987222769E-15"
-        izz="2.28014946222196E-12" />
-    </inertial>
     <visual>
       <origin
         xyz="0 0 0"
