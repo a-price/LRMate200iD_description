@@ -95,8 +95,8 @@
     <limit
       lower="-2.967059728"
       upper="2.967059728"
-      effort="0"
-      velocity="0" />
+      effort="135"
+      velocity="8.028518" />
   </joint>
   <link
     name="bicep">
@@ -153,8 +153,8 @@
     <limit
       lower="-1.919862177"
       upper="2.094395102"
-      effort="0"
-      velocity="0" />
+      effort="308"
+      velocity="8.028518" />
   </joint>
   <link
     name="elbow">
@@ -211,8 +211,8 @@
     <limit
       lower="-3.577924967"
       upper="1.204277184"
-      effort="0"
-      velocity="0" />
+      effort="308"
+      velocity="9.075716" />
   </joint>
   <link
     name="forearm">
@@ -269,8 +269,8 @@
     <limit
       lower="-3.316125579"
       upper="3.316125579"
-      effort="0"
-      velocity="0" />
+      effort="20"
+      velocity="9.773848" />
   </joint>
   <link
     name="wrist">
@@ -327,8 +327,8 @@
     <limit
       lower="-2.094395102"
       upper="2.094395102"
-      effort="0"
-      velocity="0" />
+      effort="20"
+      velocity="9.773848" />
   </joint>
   <link
     name="palm">
@@ -385,7 +385,7 @@
     <limit
       lower="-6.283185307"
       upper="6.283185307"
-      effort="0"
-      velocity="0" />
+      effort="10"
+      velocity="15.70797" />
   </joint>
 </robot>
