@@ -1,12 +1,10 @@
 <launch>
   <arg
-    name="model" />
-  <arg
     name="gui"
-    default="False" />
+    default="True" />
   <param
     name="robot_description"
-    textfile="$(find LRMate200iD_description)/robots/LRMate200iD_description.URDF" />
+    textfile="$(find lrmate_200id_description)/robots/lrmate_200id_description.URDF" />
   <param
     name="use_gui"
     value="$(arg gui)" />
@@ -22,5 +20,5 @@
     name="rviz"
     pkg="rviz"
     type="rviz"
-    args="-d $(find LRMate200iD_description)/urdf.rviz" />
+    args="-d $(find lrmate_200id_description)/urdf.rviz" />
 </launch>
